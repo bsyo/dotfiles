@@ -40,6 +40,11 @@
           "betterdisplay"
           "slack"
           "cursor"
+          "input-source-pro"
+          "apidog"
+          "obsidian"
+          "tailscale"
+          "claude"
         ];
       };
 
@@ -48,7 +53,6 @@
         docker.enable = true;
         podman.enable = true;
       };
-      ];
 
       # Enable Fish Shell
       programs.fish.enable = true;
