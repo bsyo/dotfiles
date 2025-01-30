@@ -17,6 +17,8 @@
         vim
         neovim
         tmux
+        alacritty
+        stow
 
         # 容器相关
         docker
