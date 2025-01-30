@@ -35,6 +35,11 @@
           "google-chrome"
           "arc"
           "ghostty"
+          "raycast"
+          "rustdesk"
+          "betterdisplay"
+          "slack"
+          "cursor"
         ];
       };
 
