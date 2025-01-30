@@ -13,11 +13,46 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       environment.systemPackages = with pkgs; [
+        # 编辑器和终端工具
+        vim
         neovim
         tmux
+        
+        # 容器相关
         docker
         podman
+        lazydocker
+
+        # 浏览器
         firefox
+
+        # 系统监控和文件管理
+        btop  # 系统监控
+        eza   # ls 替代品
+        fd    # find 替代品
+        ffmpeg
+        fzf   # 模糊查找
+        zoxide # 智能 cd
+
+        # Git 相关
+        git-flow
+        git-secrets
+        lazygit
+
+        # 开发环境和语言
+        bun    # JavaScript 运行时
+        nodejs # Node.js
+        yarn   # 包管理器
+        go     # Go 语言
+        rustup # Rust 工具链管理器
+        
+        # Python 相关
+        pipenv
+        pyenv
+        
+        # Ruby 相关
+        rbenv
+        ruby-build
       ];
 
       # Homebrew Configuration
