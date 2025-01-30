@@ -82,6 +82,7 @@
           "obsidian"
           "tailscale"
           "claude"
+          "orbstack"
         ];
       };
 
@@ -113,8 +114,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#mini
+    darwinConfigurations."mini" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
   };
