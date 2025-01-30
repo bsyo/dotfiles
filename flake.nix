@@ -5,16 +5,44 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    homebrew-nix.url = "github:homebrew/brew";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
         neovim
         tmux
+        docker
+        podman
+        firefox
+      ];
+
+      # Homebrew Configuration
+      homebrew = {
+        enable = true;
+        onActivation = {
+          autoUpdate = true;
+          cleanup = "zap";
+        };
+        taps = [
+          "homebrew/cask"
+          "homebrew/cask-versions"
+        ];
+        casks = [
+          "google-chrome"
+          "arc"
+          "ghostty"
+        ];
+      };
+
+      # Docker configuration
+      virtualisation = {
+        docker.enable = true;
+        podman.enable = true;
+      };
       ];
 
       # Enable Fish Shell
