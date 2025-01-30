@@ -17,7 +17,7 @@
         vim
         neovim
         tmux
-        
+
         # 容器相关
         docker
         podman
@@ -45,11 +45,11 @@
         yarn   # 包管理器
         go     # Go 语言
         rustup # Rust 工具链管理器
-        
+
         # Python 相关
         pipenv
         pyenv
-        
+
         # Ruby 相关
         rbenv
         ruby-build
