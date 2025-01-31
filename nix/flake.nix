@@ -19,6 +19,7 @@
         tmux
         alacritty
         stow
+        yazi
 
         # 容器相关
         docker
