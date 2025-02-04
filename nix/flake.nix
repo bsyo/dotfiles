@@ -84,6 +84,7 @@
           "tailscale"
           "claude"
           "orbstack"
+          "zoom"
         ];
       };
 
