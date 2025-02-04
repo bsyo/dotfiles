@@ -4,20 +4,23 @@
 
 ## 前置要求
 
-1. 安装 Nix 包管理器：
+- 安装 Homebrew
+
 ```bash
-sh <(curl -L https://nixos.org/nix/install)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. 安装 nix-darwin：
-```bash
-nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
-./result/bin/darwin-installer
-```
+
 
 ## 配置说明
 
 本项目使用 GNU Stow 管理 dotfiles，所有配置文件都会被软链接到用户家目录。所需的工具（如 stow、alacritty、tmux 等）都会通过 nix-darwin 自动安装。
+
+### 安装步骤
+
+```bash
+brew bundle --file=Brewfile
+```
 
 ### Alacritty 配置
 
