@@ -10,8 +10,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-
-
 ## 配置说明
 
 本项目使用 GNU Stow 管理 dotfiles，所有配置文件都会被软链接到用户家目录。所需的工具（如 stow、alacritty、tmux 等）都会通过 nix-darwin 自动安装。
@@ -85,3 +83,19 @@ stow .
 │       └── tmux.conf.local        # 本地自定义配置
 └── .tmux/                         # Oh My Tmux 仓库
 ```
+
+# font 安装
+
+- maple-font
+- ComicShannsMono Nerd Font
+
+```
+https://github.com/subframe7536/maple-font/releases
+https://www.nerdfonts.com/font-downloads
+```
+
+```bash
+brew install --cask font-maple-mono-nf
+brew install --cask font-comic-shanns-mono-nerd-font
+```
+

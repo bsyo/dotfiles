@@ -21,7 +21,6 @@ brew "zoxide"
 brew "git-flow"
 brew "git-secrets"
 brew "lazygit"
-brew "bun"
 brew "node"
 brew "yarn"
 brew "go"
@@ -31,7 +30,7 @@ brew "rbenv"
 brew "ruby-build"
 
 # 安装桌面应用 (Casks)
-cask "firefox"         # nix 中 firefox 在 systemPackages，mac 上建议使用 cask 版
+cask "firefox"
 cask "google-chrome"
 cask "arc"
 cask "ghostty"
