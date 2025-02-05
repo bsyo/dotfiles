@@ -1,12 +1,8 @@
-# Tap 必要的仓库
-tap "homebrew/cask"
-tap "homebrew/cask-versions"
-
 # 安装命令行工具 (Formulas)
+brew "autojump"
 brew "vim"
 brew "neovim"
 brew "tmux"
-brew "alacritty"
 brew "stow"
 brew "yazi"
 brew "docker"
@@ -30,8 +26,10 @@ brew "pipenv"
 brew "pyenv"
 brew "rbenv"
 brew "ruby-build"
+brew "direnv"
 
 # 安装桌面应用 (Casks)
+cask "alacritty"
 cask "firefox"
 cask "google-chrome"
 cask "arc"
@@ -45,6 +43,13 @@ cask "input-source-pro"
 cask "apidog"
 cask "obsidian"
 cask "tailscale"
+cask "podman-desktop"
 cask "claude"
 cask "orbstack"
 cask "zoom"
+cask "ollama"
+
+# fonts
+cask "font-maple-mono"
+cask "font-maple-mono-nf"
+cask "font-comic-shanns-mono-nerd-font"

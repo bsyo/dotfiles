@@ -172,12 +172,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/$USER/.local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH=$PATH:/nix/var/nix/profiles/default/bin/
-
 
 if [ -f ~/.env ]; then
     source ~/.env
 fi
-
-source /Users/yujun/.docker/init-zsh.sh || true # Added by Docker Desktop
-source "$HOME/.rye/env"
