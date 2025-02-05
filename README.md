@@ -50,17 +50,20 @@ dotfiles/
 #### 安装步骤
 
 1. 克隆仓库到家目录：
+
 ```bash
 git clone <repository-url> ~/.dotfiles
 cd ~/.dotfiles
 ```
 
 2. 初始化并更新子模块：
+
 ```bash
 git submodule update --init --recursive
 ```
 
 3. 创建必要的符号链接：
+
 ```bash
 # 确保目标目录存在
 mkdir -p .config/tmux
@@ -70,11 +73,13 @@ ln -s .tmux/.tmux.conf .config/tmux/tmux.conf
 ```
 
 4. 使用 stow 创建配置文件的符号链接：
+
 ```bash
 stow .
 ```
 
 这将会在家目录中创建如下结构：
+
 ```
 ~/
 ├── .config/
@@ -99,3 +104,9 @@ brew install --cask font-maple-mono-nf
 brew install --cask font-comic-shanns-mono-nerd-font
 ```
 
+# other
+
+```bash
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+```

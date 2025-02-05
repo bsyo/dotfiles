@@ -27,6 +27,7 @@ brew "pyenv"
 brew "rbenv"
 brew "ruby-build"
 brew "direnv"
+brew "ripgrep"
 
 # 安装桌面应用 (Casks)
 cask "alacritty"
