@@ -168,6 +168,7 @@ export PATH=$PATH:$GOBIN
 export PATH=$PATH:$GOPATH/bin
 
 eval "$(rbenv init - zsh)"
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/$USER/.local/bin:$PATH"

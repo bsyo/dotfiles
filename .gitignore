@@ -26,3 +26,4 @@ Temporary Items
 .apdisk
 
 .config/tmux/tmux.conf
+.config/tmux/plugins/*

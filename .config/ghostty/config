@@ -16,3 +16,7 @@ window-decoration = true
 window-padding-balance = true
 
 custom-shader = "shaders/glow.glsl"
+macos-option-as-alt = true
+
+keybind = alt+left=unbind
+keybind = alt+right=unbind

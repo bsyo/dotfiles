@@ -466,7 +466,7 @@ TMUX_FZF_OPTIONS="-p -w 80% -h 76% -m"
 
 TMUX_FZF_LAUNCH_KEY="f"  # 使用 'f' 键启动 fzf
 
-lMUX_FZF_ORDER="session|pane|command|keybinding|window"  
+lMUX_FZF_ORDER="session|pane|command|keybinding|window"
 # 设置 fzf 搜索顺序：会话 > 面板 > 命令 > 快捷键 > 窗口
 
 TMUX_FZF_PANE_FORMAT="#{p15:#{b:pane_current_path}} :: #{pane_current_command}"
@@ -475,7 +475,7 @@ TMUX_FZF_PANE_FORMAT="#{p15:#{b:pane_current_path}} :: #{pane_current_command}"
 # #{b:pane_current_path} 显示当前面板路径的基本名称
 # #{pane_current_command} 显示当前运行的命令
 
-set -g @continuum-restore 'on'  
+set -g @continuum-restore 'on'
 # 启用 tmux-continuum 的自动恢复功能，重启 tmux 后自动恢复上次会话
 
 
