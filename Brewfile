@@ -49,6 +49,7 @@ cask "claude"
 cask "orbstack"
 cask "zoom"
 cask "ollama"
+cask "snipaste"
 
 # fonts
 cask "font-maple-mono"
