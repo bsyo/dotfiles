@@ -28,6 +28,7 @@ brew "rbenv"
 brew "ruby-build"
 brew "direnv"
 brew "ripgrep"
+brew "bitwarden-cli"
 
 # 安装桌面应用 (Casks)
 cask "alacritty"
@@ -50,6 +51,7 @@ cask "orbstack"
 cask "zoom"
 cask "ollama"
 cask "snipaste"
+cask "bitwarden"
 
 # fonts
 cask "font-maple-mono"

@@ -269,19 +269,19 @@ tmux_conf_theme_right_separator_sub="|"
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
+#tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 #tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{pretty_pane_current_path} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+#tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
-tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
-tmux_conf_theme_status_left_attr="bold,none,none"
+#tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
+#tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
+#tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,bold"
+#tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
+#tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
+#tmux_conf_theme_status_right_attr="none,none,bold"
 
 # pairing indicator
 tmux_conf_theme_pairing="⚇"                 # U+2687
@@ -478,6 +478,40 @@ TMUX_FZF_PANE_FORMAT="#{p15:#{b:pane_current_path}} :: #{pane_current_command}"
 set -g @continuum-restore 'on'
 # 启用 tmux-continuum 的自动恢复功能，重启 tmux 后自动恢复上次会话
 
+set -g @plugin 'bsyo/tmux2k' # modern tmux theme
+# use a theme
+set -g @tmux2k-theme 'onedark'
+
+# to show icons only
+set -g @tmux2k-icons-only true
+
+# to customize duo bg and fg
+set -g @tmux2k-duo-fg "#1688f0" # this will get you duo blue shown above
+# set -g @tmux2k-duo-bg "#000000" # this will set the bg for duo theme
+
+# to set powerline symbols
+set -g @tmux2k-right-sep  # alternate right status bar sep
+set -g @tmux2k-win-right-sep  # alternate window right sep
+
+# to not show powerline
+set -g @tmux2k-show-powerline false
+
+# set start icon, accpets: `session`, 'window`, or any string
+set -g @tmux2k-start-icon ""
+
+# 基础插件设置
+set -g @tmux2k-left-plugins "git cpu ram"
+set -g @tmux2k-right-plugins "weather bandwidth time"
+
+# 窗口设置
+set -g @tmux2k-window-list-alignment 'centre'
+set -g @tmux2k-compact-windows true
+
+# 时间格式设置
+set -g @tmux2k-military-time true
+
+# 天气设置
+set -g @tmux2k-show-fahrenheit false
 
 # -- custom variables ----------------------------------------------------------
 
