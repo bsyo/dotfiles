@@ -29,6 +29,7 @@ brew "ruby-build"
 brew "direnv"
 brew "ripgrep"
 brew "bitwarden-cli"
+brew "starship"
 
 # 安装桌面应用 (Casks)
 cask "alacritty"

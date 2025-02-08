@@ -56,6 +56,10 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -161,6 +165,9 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 alias awsp='export AWS_PROFILE=$(aws configure list-profiles | fzf)'
+
+export EDITOR=nvim
+export VISUAL=nvim
 
 # If your $GOPATH variable is empty, just do it:  
 export GOPATH=$HOME/go
