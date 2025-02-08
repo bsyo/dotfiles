@@ -6,6 +6,7 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+set-window-option -g mode-keys vi
 
 # -- bindings ------------------------------------------------------------------
 
@@ -459,6 +460,8 @@ set -g @plugin 'tmux-plugins/tmux-continuum' # 自动保存和恢复 tmux 会话
 set -g @plugin 'tmux-plugins/tmux-yank'      # 改进复制功能，支持系统剪贴板
 set -g @plugin 'sainnhe/tmux-fzf'  # 集成 fzf 模糊搜索功能
 set -g @plugin 'IngoMeyer441/tmux-easy-motion'
+set -g @easy-motion-prefix "Space"
+
 TMUX_FZF_OPTIONS="-p -w 80% -h 76% -m"  
 # -p: 弹出窗口
 # -w 80%: 窗口宽度为屏幕的 80%

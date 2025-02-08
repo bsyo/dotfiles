@@ -70,6 +70,7 @@ mkdir -p .config/tmux
 
 # 创建从 .config/tmux/tmux.conf 到 .tmux/.tmux.conf 的相对符号链接
 ln -s $(pwd)/.tmux/.tmux.conf ~/.config/tmux/tmux.conf
+ln -s /opt/homebrew/bin/python3 /opt/homebrew/bin/python
 ```
 
 4. 使用 stow 创建配置文件的符号链接：
