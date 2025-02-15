@@ -32,6 +32,8 @@ brew "ripgrep"
 brew "bitwarden-cli"
 brew "starship"
 brew "pnpm"
+brew "fpp"
+brew "urlscan"
 
 # 安装桌面应用 (Casks)
 cask "alacritty"
