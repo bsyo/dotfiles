@@ -1,4 +1,5 @@
 # 安装命令行工具 (Formulas)
+brew "awscli"
 brew "autojump"
 brew "vim"
 brew "neovim"
@@ -34,6 +35,7 @@ brew "starship"
 brew "pnpm"
 brew "fpp"
 brew "urlscan"
+brew "uv"
 
 # 安装桌面应用 (Casks)
 cask "alacritty"
