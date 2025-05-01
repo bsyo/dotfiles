@@ -10,7 +10,8 @@ macos-titlebar-style = hidden
 cursor-style = block
 shell-integration-features = no-cursor
 
-theme = tokyonight-storm
+# theme = tokyonight-storm
+theme = catppuccin-mocha.conf
 
 window-decoration = true
 window-padding-balance = true
