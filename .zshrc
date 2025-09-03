@@ -23,7 +23,10 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# 启用 Starship
+eval "$(starship init zsh)"
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -98,7 +101,6 @@ blue="#06BCE4"
 cyan="#2CF9ED"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
-eval "$(zoxide init --cmd cd zsh)"
 
 # -- Use fd instead of fzf --
 
@@ -161,9 +163,12 @@ export BAT_THEME=tokyonight_night
   alias tree='eza --tree $eza_params --level=5'
 
 # ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
+# if [[ -z "${DISABLE_ZOXIDE}" ]]; then
+#   eval "$(zoxide init zsh)"
+# fi
 
-alias cd="z"
+
+# alias cd="z"
 alias awsp='export AWS_PROFILE=$(aws configure list-profiles | fzf)'
 
 export EDITOR=nvim
@@ -184,3 +189,14 @@ export PATH="/opt/homebrew/bin:$PATH"
 if [ -f ~/.env ]; then
     source ~/.env
 fi
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/yu/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export CLAUDE_BASH_TIMEOUT=86400
+export CLAUDE_MAX_EXECUTION_TIME=86400

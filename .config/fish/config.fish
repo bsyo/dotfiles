@@ -99,3 +99,8 @@ set -gx FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
 # fisher install PatrickF1/fzf.fish
 # fisher install meaningful-ooo/sponge
 # fisher install IlanCosman/tide@v5 # Alternative to powerlevel10k
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/yu/.lmstudio/bin
+# End of LM Studio CLI section
+
